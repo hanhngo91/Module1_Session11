@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luyện tập If else</title>
+</head>
+<body>
+   
+    <script>
+    //--------------------bt1-----------------------
+    //Nhập và 2 số a và b. Kiểm tra xem a có chia hết cho b ko
+        let a = +prompt('Nhập số thứ nhất');
+        let b = +prompt('Nhập số thứ hai');
+        if(a%b==0){
+            alert(`${a} có chia hết cho ${b}`);
+        }else{
+            alert(`${a} không chia hết cho ${b}`);
+        }
+
+    //--------------------bt2-----------------------
+    //Nhập tuổi của và in ra kết quả nếu tuổi của học sinh đó không đủ điều kiện vào học lớp 10
+        let a = +prompt('Nhập số tuổi của học sinh')
+        if(a>15 || a===15){
+            alert('Học sinh đủ tuổi học lớp 10');
+        }else{
+            alert('Học sinh không đủ tuổi vào lớp 10')
+        }
+
+    //--------------------bt3-----------------------
+    //Nhập một số nguyên bất kỳ và in kết quả ra màn hình để nói cho người dùng biết số đó là lớn hay nhỏ hơn 0
+        let a = +prompt('Nhập một số nguyên bất kỳ');
+        if(a>0){
+            alert(`${a} lớn hơn 0`);
+        }else{
+            alert(`${a} nhỏ hơn 0`);
+        }
+
+    //--------------------bt4-----------------------
+    // Nhập 3 số nguyên và tìm giá trị lớn nhất của ba số nguyên đó
+    let a = +prompt('Nhập số thứ nhất');
+    let b = +prompt('Nhập số thứ hai');
+    let c = +prompt('Nhập số thứ ba');
+        if(a===b && a>c){
+            alert(`Số thứ nhất là ${a} và số thứ hai là ${b} là hai số lớn nhất trong ba số ${a}, ${b} và ${c}`);
+        }else if(a===c && a>b){
+            alert(`Số thứ nhất là ${a} và số thứ ba là ${c} là hai số lớn nhất trong ba số ${a}, ${b} và ${c}`);
+         }else if(a===b && a<c){
+            alert(`Số thứ ba là ${c} là số lớn nhất trong ba số ${a}, ${b} và ${c}`);
+        }else if(a===c && a<b){
+            alert(`Số thứ hai là ${b} là số lớn nhất trong ba số ${a}, ${b} và ${c}`);
+        }else if(a===b && a===b && a===c){
+            alert(`Số thứ nhất là ${a}, số thứ hai là ${b} và số thứ ba là ${c} là ba số lớn nhất trong ba số ${a}, ${b} và ${c}`);
+        }else if(b===c && b>a){
+            alert(`Số thứ hai là ${b} và số thứ ba là ${c} là hai số lớn nhất trong ba số ${a}, ${b} và ${c}`);
+        }else if(b===c && b<a){
+            alert(`Số thứ nhất là ${a} là số lớn nhất trong ba số ${a}, ${b} và ${c}`);
+        }else if(a>b && a>c){
+            alert(`${a} là số lớn nhất trong ba số ${a}, ${b} và ${c}`);
+        }else if(a<b && b>c){
+            alert(`${b} là số lớn nhất trong ba số ${a}, ${b} và ${c}`);
+        }else{
+            alert(`${c} là số lớn nhất trong ba số ${a}, ${b} và ${c}`);
+        }
+
+    //--------------------bt5-----------------------
+    //Xếp hạng học lực của học sinh dựa trên các điểm bài kiểm tra, điểm thi giữa kỳ, điểm thi cuối kỳ
+        let a = +prompt('Nhập điểm bài kiểm tra');
+        let b = +prompt('Nhập điểm thi giữa học kỳ');
+        let c = +prompt('Nhập điểm thi cuối học kỳ');
+        let d = (a+b+c)/3;
+        if (d>8){
+            alert('Học sinh đạt học lực Giỏi');
+        }else if(d<8 && d>7 || d===7){
+            alert('Học sinh đạt học lực Khá');
+        }else if(d<7 && d>5 || d===5){
+            alert('Học sinh đạt học lực Trung Bình');
+        }else{
+            alert('Học sinh có học lực Yếu')
+        }
+
+    
+    //--------------------bt6-----------------------
+    //Tính hoa hồng nhận được tuỳ theo mức doanh số bán hàng
+        let a = +prompt('Nhập doanh thu tháng này của bạn');
+        if (a>100000000 || a===100000000){
+            let com = (a*10)/100;
+            alert(`Bạn nhận được ${com} tiền hoa hồng tháng này`)
+        }else if (a<100000000 && a>80000000 || a===80000000){
+            let com = (a*8)/100;
+            alert(`Bạn nhận được ${com} tiền hoa hồng tháng này`)
+        }else if (a<80000000 && a>50000000 || a===50000000){
+            let com = (a*5)/100;
+            alert(`Bạn nhận được ${com} tiền hoa hồng tháng này`)
+        }else if (a<50000000 && a>30000000 || a===30000000){
+            let com = (a*3)/100;
+            alert(`Bạn nhận được ${com} tiền hoa hồng tháng này`)
+        }else if (a<30000000 && a>10000000 || a===10000000){
+            let com = a/100;
+            alert(`Bạn nhận được ${com} tiền hoa hồng tháng này`)
+        }else{
+            alert('Bạn cố gắng hơn nhé')
+        }
+
+        
+
+
+    </script>
+
+    
+</body>
+</html>
